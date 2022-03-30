@@ -6,7 +6,7 @@ app.use(cors({ optionsSuccessStatus: 200 }));
 
 app.use(express.static("public"));
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const INVALID = "Invalid Date";
 
 app.get("/", function (req, res) {
